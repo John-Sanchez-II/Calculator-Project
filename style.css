@@ -1,0 +1,36 @@
+
+body{
+    background-image: url("https://mocah.org/uploads/posts/1066517-drawing-illustration-digital-art-planet-space-stars-railway-Earth-geometry-square-spaceship-atmosphere-grid-lines-science-sketches-rocket-mathematics-physics-universe-c.jpg");
+    background-repeat: no-repeat;
+    background-size: 960px 970px;
+    
+    
+    
+}
+
+
+
+.grid {
+    
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#FD9727;
+    border: black solid 1px;
+    width: auto;
+    height: 555px;
+    opacity: 60%;
+    
+}
+
+
+input {
+ width: 100%;
+ height: 65px;
+ background-color:black ;
+border: white  solid .05px;
+color: #430FA8;
+border-radius: 50px;
+}
