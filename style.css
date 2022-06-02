@@ -1,36 +1,136 @@
-
-body{
-    background-image: url("https://mocah.org/uploads/posts/1066517-drawing-illustration-digital-art-planet-space-stars-railway-Earth-geometry-square-spaceship-atmosphere-grid-lines-science-sketches-rocket-mathematics-physics-universe-c.jpg");
+body {
+    background: url("/img/space2.jpg");
     background-repeat: no-repeat;
-    background-size: 960px 970px;
-    
-    
-    
+    background-size: cover;
+    height: 100vh;
+    display: flex;
 }
 
 
 
 .grid {
-    
-    
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-color:#FD9727;
-    border: black solid 1px;
-    width: auto;
-    height: 555px;
-    opacity: 60%;
-    
+
+    display: grid;
+    place-items: center;
+    align-content: center;
+    padding-top: 20px;
+    width: 420px;
+    height: 650px;
+    border: 3px solid #E6F7FF;
+    margin: auto;
+    background: white;
+    border: 8px outset #ea3c53;
+    border-radius: 25px;
+    animation-iteration-count: 1;
+
 }
 
 
+
 input {
- width: 100%;
- height: 65px;
- background-color:black ;
-border: white  solid .05px;
-color: #430FA8;
-border-radius: 50px;
+    width: 390px;
+    height: 120px;
+    font: bolder;
+    color: white;
+    border-radius: 25px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 50px;
+    margin-bottom: 20px;
+
+
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px;
+    background: black;
+
+}
+
+button {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 50px;
+    padding: 25px;
+    margin-right: 10px;
+    border-radius: 25px;
+    color: white;
+    margin-bottom: 15px;
+
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 5px .5px #0B325E;
+    background: black;
+
+}
+
+
+
+.reset {
+    position: relative;
+    z-index: 0;
+    color: #ea3c53;
+
+
+}
+
+/* author Kocsten, used his template but modified it to work for my calculator  */
+.reset:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 500%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 25px;
+}
+
+.reset:active {
+    color: black;
+}
+
+.reset:active:after {
+    background: transparent;
+}
+
+.reset:hover:before {
+    opacity: 2;
+}
+
+.reset:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+    
+    /* height: 114px;
+    width: 80px; */
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#flip {
+    height: 5px;
+    width: 110px;
+    font-size: small;
+    display: grid;
+    align-content: center;
+    border-radius: 10px;
 }

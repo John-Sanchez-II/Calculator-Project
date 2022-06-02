@@ -2,55 +2,62 @@
 <html lang="en">
 
 <head>
-    
-    <div class="grid">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Calculator</title>
-        <link rel="stylesheet" href="style.css">
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <title>My Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <div class = grid>
-        <div class="top" >
-            <input type="text" id="Number" placeholder="">
-            <button type="reset">C</button>
-
-        </div>
-        
-        <div class="row 1">
-            <button type="submit">7</button>
-            <button type="submit">8</button>
-            <button type="submit">9</button>
-            <button type="submit">%</button>
-        </div>
-        <div class="row 2">
-            <button type="submit">4</button>
-            <button type="submit">5</button>
-            <button type="submit">6</button>
-            <button type="submit">x</button>
-        </div>
-        <div class="row 3">
-            <button type="submit">1</button>
-            <button type="submit">2</button>
-            <button type="submit">3</button>
-            <button type="submit">-</button>
+    <button type="button" id = "flip">Calculator</button>
+    <div class=grid>
+        <div class="top">
+            <input type="text" class = "display" >
+           
         </div>
 
-        <div class="row 4">
 
-            <button type="submit">0</button>
-            <button type="submit">+</button>
-            <button type="submit">.</button>
-            <button type="submit">=</button>
-
+        <div class="row-1">
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+            <button value="+" class = "operator">+</button>
+            
+           
+        </div>
+        <div class="row-2">
+            <button value="4">4</button>
+            <button value="5">5</button>
+            <button value="6">6</button>
+            <button value="-">-</button>
+           
+        </div>
+        <div class="row-3">
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button value="*">x</button>
         </div>
 
-    
-    </div>  
+        <div class="row-4">
 
+            <button value = "C" class="reset" >C</button>
+            <button value="0">0</button>
+            <button value="=">=</button>
+            <button value="/">÷</button>
+        </div>
+
+    </div>
+<div ide="front" class = "cardFront">front</div>
 
 
     <script src="script.js"></script>
