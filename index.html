@@ -7,58 +7,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <title>My Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet">
+    <title>Simple Calculator</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <button type="button" id = "flip">Calculator</button>
-    <div class=grid>
+   
+    <div class=calculator>
+        
         <div class="top">
-            <input type="text" class = "display" >
-           
+
+            <input type="text" class="display"disabled>
+
         </div>
-
-
+        <div class="row-0">
+            <button value="C" class="reset">C</button>
+           <button value="delete" id ="delete">Del</button>
+            
+        </div>
         <div class="row-1">
             <button value="7">7</button>
             <button value="8">8</button>
             <button value="9">9</button>
-            <button value="+" class = "operator">+</button>
-            
-           
+            <button value="+" id = "add">+</button>
+
+
         </div>
         <div class="row-2">
             <button value="4">4</button>
             <button value="5">5</button>
             <button value="6">6</button>
-            <button value="-">-</button>
-           
+            <button value="-" id = "subtract">-</button>
+
         </div>
         <div class="row-3">
             <button value="1">1</button>
             <button value="2">2</button>
             <button value="3">3</button>
-            <button value="*">x</button>
+            <button value="*" id = "multiply">x</button>
         </div>
 
         <div class="row-4">
-
-            <button value = "C" class="reset" >C</button>
+            <button value="=" class="equal">=</button>
             <button value="0">0</button>
-            <button value="=">=</button>
-            <button value="/">÷</button>
+            <button value="." id = "dot">.</button>
+            <button value="/" id = "divide">÷</button>
+
         </div>
 
     </div>
-<div ide="front" class = "cardFront">front</div>
-
+    <div id="title">
+        <p> Juan Sanchez Calculator</p>
+    </div>
 
     <script src="script.js"></script>
 </body>

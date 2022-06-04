@@ -2,58 +2,70 @@ body {
     background: url("/img/space2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    display: flex;
+    overflow: hidden;
+    padding: 70px;
 }
 
+#title {
+    
+    display: flex;
+    justify-content: center;
+    
+}
 
+p {
+    font-family: 'Lily Script One', cursive;
+    color: white;
+    opacity: .2;
+    border: 3px solid red;
+    
 
-.grid {
+}
 
+p:hover {
+    opacity: 1.0;
+}
+
+.calculator {
+    background: url("/img/stars.jfif");
     display: grid;
     place-items: center;
     align-content: center;
     padding-top: 20px;
-    width: 420px;
-    height: 650px;
-    border: 3px solid #E6F7FF;
+    width: 425px;
+    height: 665px;
+    grid-gap: 2px;
     margin: auto;
-    background: white;
-    border: 8px outset #ea3c53;
-    border-radius: 25px;
-    animation-iteration-count: 1;
+    border: 12px outset #FD9727;
+    border-radius: 50px;
 
 }
 
-
-
-input {
+.display {
     width: 390px;
-    height: 120px;
+    height: 140px;
     font: bolder;
-    color: white;
+    color: #9b111e;
     border-radius: 25px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 50px;
-    margin-bottom: 20px;
-
-
-    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px;
-    background: black;
+    font-size: 75px;
+    text-align: right;
+    box-shadow: inset -1px 3px 8px 5px #414a4c;
+    background: white;
 
 }
 
 button {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 50px;
-    padding: 25px;
-    margin-right: 10px;
-    border-radius: 25px;
-    color: white;
-    margin-bottom: 15px;
 
-    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 5px .5px #0B325E;
-    background: black;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 55px;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: inset -1px 3px 9px 5px #414a4c;
+    height: 100px;
+    color: #FD9727;
+    -webkit-text-stroke: 1px black;
+    align-items: center;
 
 }
 
@@ -61,19 +73,20 @@ button {
 
 .reset {
     position: relative;
-    z-index: 0;
-    color: #ea3c53;
-
-
+    z-index: 1;
+    color: #9b111e;
+    background: white;
+    width: 171px;
+    height: 75px;
 }
 
 /* author Kocsten, used his template but modified it to work for my calculator  */
 .reset:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, white, #228b22, #ff0000,#00aae4, #3cd070, #ffff31, #87cefa);
     position: absolute;
     top: -2px;
-    left: -2px;
+    left: 2px;
     background-size: 500%;
     z-index: -1;
     filter: blur(5px);
@@ -85,31 +98,8 @@ button {
     border-radius: 25px;
 }
 
-.reset:active {
-    color: black;
-}
-
-.reset:active:after {
-    background: transparent;
-}
-
 .reset:hover:before {
-    opacity: 2;
-}
-
-.reset:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: white;
-    left: 0;
-    top: 0;
-    border-radius: 25px;
-    
-    /* height: 114px;
-    width: 80px; */
+    opacity: .8;
 }
 
 @keyframes glowing {
@@ -121,16 +111,68 @@ button {
         background-position: 400% 0;
     }
 
-    100% {
-        background-position: 0 0;
-    }
 }
 
-#flip {
-    height: 5px;
-    width: 110px;
-    font-size: small;
-    display: grid;
-    align-content: center;
-    border-radius: 10px;
+.equal {
+    position: relative;
+    z-index: 1;
+    color: #9b111e;
+    background: white;
+}
+    .equal:before {
+        content: '';
+        background: linear-gradient(45deg, white, #228b22,  #00aae4,  #ff0000,  #3cd070, #ffff31, #87cefa);
+        position: absolute;
+        top: -2px;
+        left: 2px;
+        background-size: 500%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 25px;
+    }
+    
+    .equal:hover:before {
+        opacity: .8;
+    }
+    
+    @keyframes glowing {
+        0% {
+            background-position: 0 0;
+        }
+    
+        50% {
+            background-position: 400% 0;
+        }
+
+}
+
+
+#delete {
+    width: 165px;
+    height: 75px;
+}
+
+#add{
+    color: #430FA8;
+}
+
+#subtract{
+    color: #430FA8;
+}
+
+#multiply{
+    color: #430FA8;
+}
+ 
+#divide{
+    color: #430FA8;
+}
+
+#dot{
+    color: #430FA8;
 }

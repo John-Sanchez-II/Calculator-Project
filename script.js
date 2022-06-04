@@ -7,6 +7,7 @@ buttons.forEach(function (button) {
 
 })
 
+
 function calculate(event) {
 
     const buttonValue = event.target.value;
