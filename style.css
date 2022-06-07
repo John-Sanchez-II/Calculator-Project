@@ -15,16 +15,11 @@ body {
 
 p {
     font-family: 'Lily Script One', cursive;
-    color: white;
-    opacity: .2;
-    border: 3px solid red;
+    color: #FD9727;
     
-
 }
 
-p:hover {
-    opacity: 1.0;
-}
+
 
 .calculator {
     background: url("/img/stars.jfif");
@@ -76,8 +71,9 @@ button {
     z-index: 1;
     color: #9b111e;
     background: white;
-    width: 171px;
+    width: 350px;
     height: 75px;
+    line-height: 20px;
 }
 
 /* author Kocsten, used his template but modified it to work for my calculator  */
